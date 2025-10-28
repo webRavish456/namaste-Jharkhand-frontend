@@ -1,0 +1,2496 @@
+@import "tailwindcss";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+:root {
+  --primary-color:#2B8C54;
+  --secondary-color:#682900;
+  --font-family-shantell: "Shantell Sans", sans-serif;
+  --font-family-acronica: "Acronica", sans-serif;
+  --font-family-aclonica: "Aclonica", sans-serif;
+  --font-family-marcellus: "Marcellus", serif;
+  --font-family-poppins: "Poppins", sans-serif;
+  --font-family-rambla: "Rambla", sans-serif;
+}
+
+p {
+  line-height: 1.8;
+}
+.hero-image-section {
+  
+  height: 540px;
+  @media (max-width: 768px) {
+    height: 320px;
+  }
+  @media (max-width: 480px) {
+    height: 220px;
+  }
+  @media (max-width: 320px) {
+    height: 180px;
+  }
+}
+
+.explore-hero-image-section {
+  height: 320px;
+  @media (max-width: 768px) {
+    height: 280px;
+  }
+}
+
+
+
+.explore-details-hero-image-section{
+  height: 320px;
+  @media (max-width: 768px) {
+    height: 280px;
+  }
+}
+
+.testimonial-hero-image-section{
+  height: 360px;
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+}
+
+.blogs-hero-image-section{
+  height: 360px;
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+}
+/* Custom Header Styles */
+.header-logo {
+  position: relative;
+}
+
+.header-logo::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: conic-gradient(from 0deg, #ff0000, #00ff00, #ffff00, #000000, #ffffff, #ff0000);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.header-logo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Mountain Background Animation */
+@keyframes mountainMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-10px); }
+}
+
+.mountain-bg {
+  animation: mountainMove 20s ease-in-out infinite alternate;
+}
+
+/* Text Shadow Effects */
+.text-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.text-shadow-xl {
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+}
+
+/* Acronica Font Styles */
+.jharkhand-title {
+  z-index: 7;
+  font-family: Arial, Helvetica, sans-serif !important;
+  height: auto;
+  width: auto;
+  color: rgba(255, 255, 255, 0.42);
+  text-decoration: none;
+  white-space: nowrap;
+  min-height: 0px;
+  min-width: 0px;
+  max-height: none;
+  max-width: none;
+  text-align: center;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  letter-spacing: 0px;
+  font-weight: 700;
+  font-stretch: expanded;
+  font-variant-numeric: tabular-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern" 0;
+  font-size: 3rem !important;
+  backdrop-filter: none;
+  filter: none;
+  transform-origin: 50% 50%;
+  opacity: 1;
+  transform: translate(0px, 0px);
+  visibility: visible;
+}
+.explore-skeleton-card {
+  width: 25vw;
+  height: 466px;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .explore-skeleton-card {
+    width: 100vw !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Responsive font sizes for JHARKHAND title */
+
+@media (max-width: 360px) {
+  .jharkhand-title {
+    font-size: 2.4rem !important;
+  }
+}
+@media (min-width: 400px) {
+  .jharkhand-title {
+    font-size: 3rem !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .jharkhand-title {
+    font-size: 5rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .jharkhand-title {
+    font-size: 7rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .jharkhand-title {
+    font-size: 9rem !important;
+  }
+}
+
+.page-title {
+  z-index: 6;
+  font-family: "Rozha One", sans-serif !important;
+  text-transform: uppercase;
+  height: auto;
+  color: rgb(255, 255, 255) !important;
+}
+
+
+.experience-title {
+  font-family: "Shantell Sans", sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.8;
+  position: relative;
+  top: -60px;
+}
+
+.explore-section {
+   position: relative;
+   top:-60px
+}
+
+/* Override default image styles */
+.custom-image {
+  max-width: none !important;
+  height: auto !important;
+}
+
+.explore-title {
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #682900;
+}
+
+.header-title {
+  font-family: "Aclonica", Sans-serif;
+  color: hsl(145, 53%, 36%);
+font-weight: 600;
+}
+.explore-heading-title {
+  font-size: 32px;
+  -webkit-text-stroke-color: #000;
+  stroke: #000;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.discover-header-title {
+  font-size: 38px;
+  padding:50px 0px 40px;
+}
+
+
+.explore-land-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.smoke-effect-bottom {
+
+   position: absolute;
+   z-index: 1;
+   transform: scale(1.2);
+   width: 100%;
+   height: 330px;
+   bottom: -150px;
+}
+
+.explore-smoke-effect-bottom{
+
+  position: absolute;
+  z-index: 1;
+  transform: scale(1.2);
+  width: 100%;
+  height: 300px;
+  bottom: -150px;
+
+}
+
+.testimonial-smoke-effect-bottom{
+  position: absolute;
+  z-index: 1;
+  transform: scale(1.2);
+  width: 100%;
+  height: 300px;
+  bottom: -130px;
+}
+
+.blogs-smoke-effect-bottom{
+  position: absolute;
+  z-index: 1;
+  transform: scale(1.2);
+  width: 100%;
+  height: 320px;
+  bottom: -150px;
+}
+
+
+.explore-land-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1200px) {
+  .explore-land-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .explore-land-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .explore-heading-title {
+    font-size: 28px;
+    -webkit-text-stroke-color: #000;
+    stroke: #000;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+  
+  }
+  .explore-title {
+    font-family: "Shantell Sans", Sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #682900;
+  }
+  .experience-title {
+    font-family: "Shantell Sans", sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.8;
+    position: relative;
+    top: -36px;
+  }
+
+  .explore-section {
+    position: relative;
+    top:0px;
+    padding: 20px 0px;
+ }
+ .smoke-effect-bottom {
+
+  position: absolute;
+  z-index: 1;
+  transform: scale(1.2);
+  width: 100%;
+  height: 320px;
+  bottom: -158px;
+  max-width: 100% !important;
+}
+.explore-smoke-effect-bottom{
+
+  position: absolute;
+  z-index: 1;
+  transform: scale(1.2);
+  width: 100%;
+  height: 320px;
+  bottom: -130px;
+  max-width: 100% !important;
+
+}
+.testimonial-smoke-effect-bottom{
+  bottom: -120px;
+  max-width: 100% !important;
+}
+.blogs-smoke-effect-bottom{
+  bottom: -130px;
+  max-width: 100% !important;
+}
+
+}
+
+@media (max-width: 480px) {
+  .experience-title {
+    font-family: "Shantell Sans", sans-serif !important;
+    font-size: 8px !important;
+    line-height: 1.4;
+    position: relative;
+    top: -36px;
+  }
+}
+/* Aclonica Font Class */
+.font-aclonica {
+  font-family: "Aclonica", sans-serif;
+}
+
+/* Marcellus Font Class */
+.font-marcellus {
+  font-family: "Marcellus", sans-serif;
+}
+
+/* Poppins Font Class */
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #2B8C54;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+
+.discover-image-title {
+  color: #682900;
+    background-color: #CDFEFF00;
+    font-family: "Shantell Sans", Sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-block-start: 15px;
+}
+
+.discover-image-container {
+  margin: 40px 10px 20px;
+}
+
+.discover-image-card {
+  transition: transform 0.3s ease;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.15);
+}
+
+.discover-image-card:hover {
+  animation: bounceUpDown 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .discover-header-title {
+    font-size: 28px;
+  }
+}
+
+/* Explore Jharkhand Section */
+
+
+
+
+.explore-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.journey-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+  stroke: #FFFFFF;
+  color: #FFFFFF4A;
+  position: relative;
+  top:-76px;
+}
+
+.explore-jharkhand-journey-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+  stroke: #FFFFFF;
+  color: #FFFFFF4A;
+  position: relative;
+ top: -50px;
+}
+
+.explore-journey-title {
+
+  font-family: "Aclonica", Sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+  stroke: #FFFFFF;
+  color: #FFFFFF4A;
+  position: relative;
+  top:-40px;
+
+}
+
+.testimonial-journey-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+  stroke: #FFFFFF;
+  color: #FFFFFF4A;
+  position: relative;
+  top:-58px;
+}
+
+.explore-header-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  color: #FFFFFF;
+  position: relative;
+  top:-40px;
+}
+
+.explore-heritage-section {
+  background: linear-gradient(to bottom, #E7F6E9, white);
+}
+
+.explore-jharkhand-section {
+  background: linear-gradient(to bottom, white, #E7F6E9);
+}
+
+.explore-jharkhand {
+  background-image: url('/explore-jharkhand.webp');
+  margin:0px 10%;
+  border-radius: 12px;
+  background-color: #00000070;
+  backdrop-filter: blur(100px);
+  top:84px;
+  position:absolute;
+  height: 300px;
+}
+
+.explore-jharkhand-content-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+
+.explore-jharkhand-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 60px;
+}
+
+.explore-jharkhand-card {
+  padding: 130px 0px 0px 130px; 
+}
+
+.explore-jharkhand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  z-index: 1;
+}
+.explore-jharkhand-image img {
+  border-radius: 12px;
+  transform:scale(1.04)
+}
+
+.explore-jharkhand > * {
+  position: relative;
+  z-index: 2;
+}
+
+.explore-jharkhand-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: #ECECEC;
+}
+
+.explore-jharkhand-content {
+  text-align: left;
+    font-family: "Shantell Sans", Sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.explore-jharkhand-button {
+  background-color: #2B8C54;
+  font-family: "Shantell Sans", Sans-serif;
+  font-weight: 500;
+  border-radius: 20px 20px 20px 20px;
+  padding: 8px 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.explore-jharkhand-button-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+@media (max-width: 1150px) {
+  .explore-jharkhand {
+    margin:0px;
+  }
+  .explore-jharkhand-card {
+    padding: 120px 0px 0px 0px; 
+  }
+  .explore-jharkhand-content-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .explore-jharkhand-content-container {
+    flex-direction: column;
+  }
+  .explore-jharkhand {
+    background-image: url('/explore-jharkhand.webp');
+    margin:0px;
+    background-color: #00000070;
+    backdrop-filter: blur(100px);
+    position:absolute;
+    height: 100%;
+    border-radius: 0px;
+    top: 0px;
+    overflow: hidden;
+  }
+
+  .explore-header-title {
+    font-family: "Aclonica", Sans-serif;
+    font-size: 31px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    color: #FFFFFF;
+    position: relative;
+    top:-40px;
+  }
+
+  .explore-jharkhand-container {
+    padding: 0px 10px;
+    text-align: center;
+    flex-direction: column;
+
+  }
+
+
+  .journey-title {
+    font-family: "Aclonica", Sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    -webkit-text-stroke-width: 1px;
+    stroke-width: 1px;
+    -webkit-text-stroke-color: #FFFFFF;
+    stroke: #FFFFFF;
+    color: #FFFFFF4A;
+    position: relative;
+    top:0px;
+  }
+
+
+  .explore-journey-title {
+
+    font-family: "Aclonica", Sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    -webkit-text-stroke-width: 1px;
+    stroke-width: 1px;
+    -webkit-text-stroke-color: #FFFFFF;
+    stroke: #FFFFFF;
+    color: #FFFFFF4A;
+    position: relative;
+    top:0px;
+  
+  }
+  
+
+  
+  .explore-jharkhand-image {
+    order: 2;
+    margin-top:0px;
+    max-height: 100% !important;
+    position: relative;
+    overflow: hidden;
+    bottom: 0px;
+  }
+  
+  .explore-jharkhand-image img {
+    max-width: 100% !important;
+   position: relative;
+    height: 100% !important;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+
+.explore-jharkhand-card {
+  padding: 10px 0px 0px 10px; 
+}
+
+.explore-jharkhand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  z-index: 1;
+}
+.explore-jharkhand-image img {
+  border-radius: 12px;
+  transform:scale(1.06);
+  overflow: hidden;
+}
+
+.explore-jharkhand > * {
+  position: relative;
+  z-index: 2;
+}
+
+.explore-jharkhand-title {
+  padding-top: 20px;
+  font-family: "Aclonica", Sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #ECECEC;
+}
+
+.explore-jharkhand-content {
+  text-align: center;
+    font-family: "Shantell Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.explore-jharkhand-button {
+  background-color: #2B8C54;
+  font-family: "Shantell Sans", Sans-serif;
+  font-weight: 500;
+  border-radius: 20px 20px 20px 20px;
+  padding: 6px 20px;
+  color: #fff;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.explore-jharkhand-button-container {
+
+  display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+   text-align: center;
+  padding-top: 8px;
+}
+
+}
+
+/* Cultural Heritage Cards */
+
+.cultural-sarhul-title {
+  font-family: "Marcellus", Sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    color: #682900;
+    font-size: 32px;
+}
+.cultural-sarhul-content {
+  font-family: "Marcellus", Sans-serif;
+    font-weight: 100;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.rich-culture-heritage-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  color: #2B8C54;
+}
+
+.rich-culture-heritage-subtitle {
+  font-family: "Shantell Sans", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #682900;
+}
+.rich-culture-heritage-content {
+  margin:0px 0px !important;
+  text-align: center;
+  font-family: "Poppins", Sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+
+.cultural-heritage-image-container {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 300px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 22px;
+  height: 140px;
+  width: 200px;
+   top:-22px;
+   right:-18px;
+   z-index: 1 !important
+}
+
+  .cultural-heritage-image img{
+    border-radius: 20px;
+    z-index: 2 !important;
+    height: 400px !important;
+    width: 550px !important;
+  }
+
+  @media (max-width: 1150px) {
+    .cultural-heritage-image img{
+      height: 360px !important;
+      width: 500px !important;
+    }
+  }
+
+
+.heritage-icon img,
+.folk-icon img,
+.arts-icon img {
+  width: 62px;
+  height: 62px;
+}
+
+
+
+.cultural-heritage-title{
+  font-family: "Aclonica", Sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #682900;
+}
+
+.cultural-heritage-content{
+  text-align: left;
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #424242;
+}
+.cultural-card {
+  background-image: url('/culture.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 14px;
+
+}
+.culture {
+  padding:60px 40px 0px 18px;
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+}
+
+.cultural-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 14px;
+  z-index: 1;
+}
+
+.cultural-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cultural-card-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+  color: #FFFFFF;
+}
+
+.cultural-card-content {
+  text-align: left;
+    font-family: "Shantell Sans", Sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+@keyframes bounceUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.view-more-button {
+
+  font-family: "Marcellus", Sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+}
+.border-discover {
+  background-color:#E7F6E9;
+  border-bottom:1px dashed #000;
+  padding-top:40px;
+
+}
+
+.view-more-button-container {
+  background-color: #2B8C54;
+  margin-top: 20px;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1;
+  padding: 12px 24px;
+  fill: #fff;
+  text-align: center;
+  transition: all .3s;
+  cursor: pointer;
+}
+.load-more-button-container {
+  background-color: #2B8C54;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 15px 30px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  line-height: 1;
+  fill: #fff;
+  transition: all .3s;
+  cursor: pointer;
+ margin:20px 0px;
+}
+
+.load-more-button {
+
+  font-family: "Marcellus", Sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+}
+
+@media (max-width: 768px) {
+  .cultural-sarhul-title {
+    font-family: "Marcellus", Sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.7px;
+      color: #682900;
+      font-size: 24px;
+  }
+  .cultural-sarhul-content {
+    font-family: "Marcellus", Sans-serif;
+      font-weight: 100;
+      color: #FFFFFF;
+      font-size: 18px;
+  }
+  
+  .rich-culture-heritage-title {
+    font-family: "Aclonica", Sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    color: #2B8C54;
+  }
+  
+  .rich-culture-heritage-subtitle {
+    font-family: "Shantell Sans", Sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: #682900;
+  }
+  .rich-culture-heritage-content {
+    margin:0px 0px !important;
+    text-align: center;
+    font-family: "Poppins", Sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  
+  
+  .cultural-heritage-image-container {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 300px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 22px;
+    height: 140px;
+    width: 200px;
+     top:-22px;
+     right:-18px;
+     z-index: 1 !important
+  }
+  
+  .cultural-heritage-image img{
+    border-radius: 20px;
+    z-index: 2 !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+  
+  
+  .heritage-icon img,
+  .folk-icon img,
+  .arts-icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  
+  
+  .cultural-heritage-title{
+    font-family: "Aclonica", Sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #682900;
+  }
+  
+  .cultural-heritage-content{
+    text-align: left;
+    font-family: "Shantell Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #424242;
+  }
+  .cultural-card {
+    background-image: url('/culture.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 14px;
+  
+  }
+  .culture {
+    padding:60px 40px 0px 18px;
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+  }
+  
+  .cultural-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 14px;
+    z-index: 1;
+  }
+  
+  .cultural-card > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cultural-card-title {
+    font-family: "Aclonica", Sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+    color: #FFFFFF;
+  }
+  
+  .cultural-card-content {
+    text-align: left;
+      font-family: "Shantell Sans", Sans-serif;
+      font-size: 13px;
+      font-weight: 100;
+      line-height: 22px;
+      color: #FFFFFF;
+  }
+  
+  @keyframes bounceUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  .view-more-button {
+  
+    font-family: "Marcellus", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  
+  }
+  .border-discover {
+    background-color:#E7F6E9;
+    border-bottom:1px dashed #000;
+    padding-top:40px;
+  
+  }
+  
+  .view-more-button-container {
+    background-color: #2B8C54;
+    margin-top: 20px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+    padding: 12px 24px;
+    fill: #fff;
+    text-align: center;
+    transition: all .3s;
+    cursor: pointer;
+  }
+  .load-more-button-container {
+    background-color: #2B8C54;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 15px 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    line-height: 1;
+    fill: #fff;
+    transition: all .3s;
+    cursor: pointer;
+   margin:20px 0px;
+  }
+  
+  .load-more-button {
+  
+    font-family: "Marcellus", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  
+  }
+}
+
+.incredible-jharkhand-container {
+  padding-top: 70px;
+  width: 100%;
+}
+
+.incredible-jharkhand-title {
+  font-size: 38px;
+}
+
+.incredible-jharkhand-content{
+  text-align: left;
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #6E4545;
+  padding-top: 20px;
+  width: 86%;
+}
+
+/* Incredible Jharkhand Section Responsive Styles for Mobile (0-768px) */
+@media (max-width: 768px) {
+  .incredible-jharkhand-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .incredible-jharkhand-title {
+    font-size: 28px;
+    line-height: 1.3;
+    text-align: center;
+  }
+  
+  .incredible-jharkhand-content {
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Background image responsive */
+  .incredible-jharkhand-bg {
+    height: 90vh;
+    background-size: cover;
+    background-position: left;
+  }
+}
+
+.footer-section {
+  background-color: #2B8C54;
+}
+
+.footer-tagline{
+  font-size:15px;
+}
+
+.footer-title{
+  font-size:18px;
+  margin-bottom: 30px;
+  font-family: "Aclonica";
+  font-weight: 400;
+}
+.footer-copyright {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Footer Responsive Styles for Mobile (0-768px) */
+@media (max-width: 768px) {
+  .footer-tagline {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .footer-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-copyright {
+    font-size: 13px;
+  }
+  
+  /* Footer logo responsive */
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Footer section padding adjustment */
+  .footer-section {
+    padding: 20px 0;
+  }
+  
+  /* Footer grid gap reduction */
+  .footer-grid {
+    gap: 20px;
+  }
+  
+  /* Footer links font size reduction */
+  .footer-links {
+    font-size: 14px;
+  }
+}
+
+/* Cultural Heritage Section */
+.cultural-heritage-section {
+  background: linear-gradient(to bottom, #E7F6E9,white, #E7F6E9, white);
+}
+
+.explore-jharkhandId-section {
+  background: linear-gradient(to bottom, white, #E7F6E9,white, #E7F6E9);
+}
+
+.cultural-card {
+  background-image: url('/Sarna-Sacred-Jharkhand.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 190px;
+}
+
+
+/* Explore Jharkhand Section */
+
+.explore-image-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 4px;
+}
+.explore-image-content {
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 15px;
+  line-height: 27px;
+  color: #fff;
+}
+
+/* Testimonial Section */
+
+.testimonial-card-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  position: relative;
+  top:-60px;
+}
+
+.testimonial-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  color: #682900;
+  position: relative;
+  top:26px;
+  z-index: 999;
+}
+
+.testimonial-text {
+  text-align: left;
+  font-family: "Shantell Sans", Sans-serif;
+  font-weight: 200;
+  color: #000000;
+  font-size: 15px;
+}
+
+.testimonial-date {
+  font-family: "Poppins", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.testimonial-image {
+  width: 187px !important;
+  aspect-ratio: 1/1;
+  position: relative;
+  top: 40px;
+  z-index: 999;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px 6px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-title-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Testimonial Card Content Padding */
+.testimonial-card-content {
+  padding: 40px 16px 30px 60px !important;
+}
+
+.testimonial-card-container{
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  width: 100%;
+  align-items: center;
+}
+
+/* Shine Effect for Second Image */
+.testimonial-image-shine img {
+  filter: brightness(1.1) contrast(1.1) saturate(1.2);
+}
+
+@media (max-width: 768px) {
+  .testimonial-card-container-wrapper {
+    gap: 30px;
+    top:-30px;
+  }
+  .testimonial-card-container{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 0fr 1fr;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    gap: 40px;
+  }
+
+  .testimonial-title-container {
+    justify-content: center;
+  }
+
+  .testimonial-title {
+     font-family: "Aclonica", Sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  color: #682900;
+  position: relative;
+  top:26px;
+  z-index: 999;
+  }
+
+  .testimonial-journey-title {
+
+    font-family: "Aclonica", Sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    -webkit-text-stroke-width: 1px;
+    stroke-width: 1px;
+    -webkit-text-stroke-color: #FFFFFF;
+    stroke: #FFFFFF;
+    color: #FFFFFF4A;
+    position: relative;
+    top:0px;
+  
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card-container{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 0fr 1fr;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    gap: 40px;
+  }
+
+  .testimonial-title-container {
+    justify-content: center;
+  }
+
+  .testimonial-title {
+     font-family: "Aclonica", Sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #682900;
+  position: relative;
+  top:26px;
+  z-index: 999;
+  }
+}
+
+/* Blog Card Styling */
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+}
+.blog-related-title {
+  display: inline-block;
+  margin-bottom: 40px !important;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  position: relative;
+  font-family: "Aclonica";
+  font-weight: 400 !important;
+  color: #000;
+}
+
+.blog-related-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #15469b;
+}
+
+.post-navigation-content {
+  font-weight: 400;
+  font-size: 16px;
+  color:  #090909;
+  padding: 20px 0;
+letter-spacing: 0.5px;
+}
+
+.post-navigation-content a {
+  text-decoration: none;
+  color: #090909;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.post-navigation-content a svg {
+  transition: transform 0.3s ease;
+}
+
+.post-navigation-content a:hover {
+  color: #15469b;
+}
+
+/* Arrow hover animation for navigation */
+.post-navigation-content a:hover svg {
+  transform: translateX(6px);
+  transition: transform 0.3s ease;
+}
+
+.post-navigation-content a:first-child:hover svg {
+  transform: translateX(-6px);
+  transition: transform 0.3s ease;
+}
+
+.blog-card-related {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.blog-image-container-related
+ {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.blog-image-container-related:hover
+ {
+   opacity: 0.2;
+   transition: opacity 0.5s ease;
+}
+
+.blog-content-related {
+  padding: 16px;
+  background-color: #FFE392AD;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Aclonica";
+  font-size: 16px;
+  font-weight: 400 !important;
+}
+
+.blog-image-container {
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+}
+
+.blog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px 20px 50px 20px;
+  background-color: #FFE392AD;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.blog-content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.blog-category {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.blog-title {
+  font-family: Aclonica;
+  font-size: 19px;
+  color: #000;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.blog-metadata {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.blog-date,
+.blog-author {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blog-date i,
+.blog-author i {
+  font-size: 12px;
+}
+
+.blog-description {
+  font-family: "Poppins";
+  font-size: 14.5px;
+  color: #414141;
+  line-height: 1.8;
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* Contact Page Styling */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+}
+
+.contact-info-section {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-title {
+  font-family: "Aclonica", Sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #2B8C54;
+}
+
+.contact-details {
+  margin-bottom:8px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 12px;
+  align-items: start;
+}
+
+.contact-icon {
+  color: #2B8C54;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.contact-text {
+  text-align: left;
+    font-family: "Shantell Sans", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.contact-image-container {
+  width: 100%;
+  max-width: 100% !important;
+}
+
+
+
+.contact-image-container-johar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  max-width: 306px;
+}
+
+.contact-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .contact-image {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Enquiry Form Section */
+.enquiry-form-section {
+  background-color: #2B8C54;
+  padding: 30px 40px 20px;
+  border-radius: 16px;
+}
+
+.enquiry-title {
+  font-family: "Aclonica", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #000;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  background-color: #73C093;
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  border-radius: 6px 6px 6px 6px;
+  margin: 0px 0px 0px 0px;
+  padding: 6px 0px 6px 0px;
+  color: #fff;
+  cursor: pointer;
+  margin: 24px 0px;
+}
+
+@media (max-width: 768px) {
+  .enquiry-title {
+    font-size: 26px;
+  }
+}
+
+
+
+
+/* Privacy Policy Styling */
+.privacy-policy-content {
+  font-family: "Rambla", Sans-serif !important;
+  line-height: 1.6;
+  color: #000;
+}
+
+.privacy-title {
+  font-family: "Rambla", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.privacy-link {
+  font-weight: 400;
+  font-family: monospace;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.privacy-paragraph {
+  font-family: "Rambla", Sans-serif !important;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.privacy-section {
+  margin-bottom: 32px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.privacy-section-title {
+  font-family: "Rambla", Sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+
+.privacy-subsection-title {
+  font-family: "Rambla", Sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.privacy-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  list-style-type: disc;
+}
+
+.privacy-list li {
+  font-family: "Rambla", Sans-serif !important;
+  font-size: 16px;
+  margin-left: 30px;
+  color: #000;
+  margin-bottom: 8px;
+  line-height: 2.4;
+}
+
+.privacy-footer {
+  font-family: "Rambla", Sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Terms and Conditions Styling */
+.terms-content {
+  font-family: "Rambla", Sans-serif !important;
+  line-height: 1.6;
+  color: #000;
+}
+
+.terms-title {
+  font-family: "Rambla", Sans-serif !important;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.terms-link {
+  font-weight: 400;
+  font-family: monospace;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.terms-paragraph {
+  font-family: "Rambla", Sans-serif !important;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.terms-section {
+  margin-bottom: 32px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.terms-section-title {
+  font-family: "Rambla", Sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 16px;
+  margin-top: 2px;
+}
+
+.terms-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.terms-list li {
+  font-family: "Rambla", Sans-serif !important;
+  font-size: 16px;
+  margin-left: 30px;
+  color: #000;
+  margin-bottom: 8px;
+  line-height: 2.4;
+  list-style-type: disc;
+}
+
+/* Blog Detail Page Styling */
+.blog-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb-link {
+  color: #2B8C54;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #1f6b3a;
+}
+
+.breadcrumb-separator {
+  color: #999;
+}
+
+.breadcrumb-current {
+  color: #000;
+  font-weight: 500;
+}
+
+.blog-detail-title {
+  font-family: "Aclonica", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.blog-detail-subtitle {
+  font-family: "Aclonica", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #2B8C54;
+  margin-bottom: 32px;
+  line-height: 1.3;
+}
+
+.blog-detail-content {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  color: #000;
+}
+
+.blog-paragraph {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.blog-paragraph h1 {
+  font-size: 32px;
+  color: #000;
+  font-family: Roboto, sans-serif;
+}
+
+.blog-paragraph h2 {
+  font-size: 24px;
+  color: #000;
+  font-family: Roboto, sans-serif;
+  padding: 18px 0px;;
+}
+
+.blog-paragraph h3 {
+  font-size: 21px;
+  color: #000;
+  font-family: Aclonica;
+  padding: 10px 0px !important;
+}
+
+.blog-paragraph h3:empty {
+  display: none;
+}
+
+.blog-paragraph h2:empty {
+  display: none;
+}
+
+.blog-paragraph h1:empty {
+  display: none;
+}
+.blog-paragraph p:empty {
+  display: none;
+}
+
+.blog-paragraph p {
+  font-family: "Poppins", Sans-serif;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.6;
+    font-size: 15px;
+    padding: 0px 0px 14px 0px;
+}
+
+
+.blog-paragraph ul {
+  margin: 0;
+  padding: 0 0 18px 0;
+  list-style: disc;
+}
+
+
+
+
+.blog-paragraph img + ul {
+  padding-top: 18px;
+}
+
+
+
+
+.blog-paragraph li {
+  display: list-item;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: disc;
+  margin-left: 50px;
+  text-overflow: ellipsis;
+}
+.blog-paragraph li p{
+  padding: 0px !important;
+}
+
+/* Fix p tags after images to stay inline */
+.blog-paragraph img + p {
+  display: inline-block;
+  margin: 0;
+  padding: 24px 0px;
+}
+
+.blog-paragraph img + h3 {
+  display: inline-block;
+  margin: 0;
+  padding: 16px 0px !important;
+}
+
+.blog-paragraph a {
+  color: blue !important;
+  text-decoration: underline !important;
+}
+
+
+/* Icon sizing for blog-paragraph (same as introduction-detail-description) */
+.blog-paragraph i,
+.blog-paragraph svg,
+.blog-paragraph img[src*="icon"],
+.blog-paragraph .icon {
+  width: 8px !important;
+  height: 8px !important;
+  font-size: 8px !important;
+}
+
+.blog-paragraph img[src*="emoji"],
+.blog-paragraph img[src*="s.w.org"],
+.blog-paragraph img[alt*="emoji"] {
+  width: 24px !important;
+  height: 24px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: 6px;
+}
+
+/* YouTube Video Embeds */
+.blog-paragraph iframe {
+  width: 100% !important;
+  height: 400px; /* Keep original YouTube height */
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* YouTube Video Container */
+.blog-paragraph .youtube-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.blog-paragraph .youtube-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+/* Font Awesome Icons for Blog Meta */
+.blog-meta .date-icon::before {
+  content: "\f073";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #2b65bf;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+.blog-meta .date-icon:hover::before {
+  color: #15469b;
+}
+
+.date-icon{
+  color: #000 !important;
+  font-family: Marcellus;
+  font-weight: 400; 
+  font-size: 13px;
+  cursor: pointer;
+}
+.category-icon {
+  color: #000 !important;
+  font-family: Marcellus;
+  font-weight: 400; 
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tags-icon{
+  color: #000 !important;
+  font-family: Marcellus;
+  font-weight: 400; 
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.date-icon:hover {
+  color: #15469b !important;
+}
+
+.category-icon:hover {
+  color: #15469b !important;
+}
+
+.tags-icon:hover {
+  color: #15469b !important;
+}
+
+
+.blog-meta .category-icon::before {
+  content: "\f07c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #2b65bf;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+.blog-meta .category-icon:hover::before {
+  color: #15469b;
+}
+
+.blog-meta .tags-icon::before {
+  content: "\f02c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #2b65bf;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+.blog-meta .tags-icon:hover::before {
+  color: #15469b;
+}
+
+
+.blog-section-title {
+  font-family: "Aclonica", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.attraction-item {
+  margin-bottom: 24px;
+}
+
+.attraction-title {
+  font-family: "Aclonica", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2B8C54;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.read-more-link {
+  color: #2B8C54;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+  color: #1f6b3a;
+  text-decoration: underline;
+}
+
+.blog-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-list li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.itinerary-section {
+  margin-bottom: 24px;
+}
+
+.itinerary-day {
+  font-family: "Aclonica", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2B8C54;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 16px;
+}
+
+.blog-date {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.blog-category {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.blog-tags {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 40px 0;
+  flex-wrap: wrap;
+}
+
+.post-navigation-content {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 40px 0;
+
+}
+
+.tag-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.blog-tag {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: #2B8C54;
+  background-color: #f0f8f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.post-navigation {
+  margin: 40px 0;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.nav-title {
+  font-family: "Aclonica", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2B8C54;
+}
+
+.nav-link {
+  font-family: "Poppins" !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 22px !important;
+  letter-spacing: 0.6px !important;
+  text-transform: capitalize !important;
+  
+}
+.related-posts {
+  margin: 40px 0;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.related-title {
+  font-family: "Aclonica", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.related-post {
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.related-post:hover {
+  background-color: #f0f0f0;
+}
+
+.related-post-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2B8C54;
+  margin: 0;
+}
+
+
+.explore-jharkhand-content {
+  text-align: center;
+    font-family: "Shantell Sans", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+   
+}
+
+.explore-jharkhand-content p{
+  line-height: 1.8;
+  margin: 0 0 20px;
+}
+
+.introduction-description p{
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.8;
+}
+.introduction-description p:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.introduction-detail-description {
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.8;
+}
+.introduction-detail-description li {
+  list-style-type: disc;
+  margin-left: 50px;
+  margin-bottom: 18px;
+}
+
+.introduction-detail-description li p {
+  margin: 0;
+  display: inline;
+}
+
+/* Emoji Images Size */
+.introduction-detail-description img[src*="emoji"],
+.introduction-detail-description img[src*="s.w.org"],
+.introduction-detail-description img[alt*="emoji"] {
+  width: 18px !important;
+  height: 18px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+
+
+.introduction-description p{
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.8;
+}
+.introduction-description p:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.introduction-detail-description {
+  font-family: "Shantell Sans", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.8;
+}
+.introduction-detail-description li {
+  list-style-type: disc;
+  margin-left: 35px;
+  margin-bottom: 18px;
+}
+
+.introduction-detail-description li p {
+  margin: 0;
+  display: inline;
+}
+
+/* Emoji Images Size */
+.introduction-detail-description img[src*="emoji"],
+.introduction-detail-description img[src*="s.w.org"],
+.introduction-detail-description img[alt*="emoji"] {
+  width: 18px !important;
+  height: 18px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: 6px;
+}
+}
+
+
+
