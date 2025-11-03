@@ -363,7 +363,7 @@ export default function Home() {
 
       {/* Incredible Jharkhand Section */}
       <section className="bg-cover">
-        <div className="w-full h-130 bg-center bg-no-repeat incredible-jharkhand-bg" style={{backgroundImage: 'url(/temple.webp)', objectFit: 'contain'}}>
+        <div className="w-full h-170 incredible-jharkhand-bg" style={{backgroundImage: 'url(/temple.jpg)',backgroundSize: 'cover', backgroundPosition: 'center 60%'}}>
            <div className="relative max-w-6xl mx-auto px-2  sm:px-4 lg:px-2 incredible-jharkhand-container">
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           

@@ -56,7 +56,7 @@ export default function ExploreJharkhandDetail() {
     
          
          {/* Hero Section Skeleton */}
-         <section className="relative h-[320px] flex flex-col overflow-hidden bg-gray-200 ">
+         <section className="relative h-[340px] flex flex-col overflow-hidden bg-gray-200 ">
            <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>
            <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 flex-1 flex items-center justify-center bottom-4">
              <div className="h-8 bg-gray-400 rounded animate-pulse w-64"></div>
@@ -104,7 +104,7 @@ export default function ExploreJharkhandDetail() {
       ) : (
     <div className="min-h-screen bg-gray-50">
      
-     <section className="relative h-[320px] flex flex-col overflow-hidden explore-details-hero-image-section">
+     <section className="relative h-[400px] flex flex-col overflow-hidden explore-details-hero-image-section">
       
       {/* Background Image - Parasnath Temple */}
       <div className="absolute inset-0 w-full">
@@ -124,7 +124,7 @@ export default function ExploreJharkhandDetail() {
       </div>
       
       {/* Smoke/Fog Effect at Bottom */}
-      <div className= "explore-smoke-effect-bottom" >
+      <div className= "explore-id-smoke-effect-bottom" >
           <Image
             src="/smoke-group.webp"
             alt="Smoke"

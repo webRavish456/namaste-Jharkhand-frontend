@@ -42,7 +42,7 @@ export default function Blogs() {
           style={{objectPosition: 'center 54%', objectFit: 'cover'}}
           priority
         />
-        <div className="absolute inset-0 bg-black/0"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
       
       {/* Header inside hero section */}

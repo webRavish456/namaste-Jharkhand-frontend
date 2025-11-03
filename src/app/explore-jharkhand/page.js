@@ -86,16 +86,13 @@ export default function ExploreJharkhand() {
     );
   }
 
-  console.log('exploreData', exploreData?.length);
-  console.log('loading', loading)
-  console.log('error', error)
-  console.log('hasMore', hasMore)
+
 
   return (
     <div className="min-h-screen bg-gray-50">
 
 
-      <section className="relative h-[360px] flex flex-col overflow-hidden explore-hero-image-section ">
+      <section className="relative h-[400px] flex flex-col overflow-hidden explore-hero-image-section ">
       
       {/* Background Image - Parasnath Temple */}
       <div className="absolute inset-0 w-full">
@@ -107,7 +104,7 @@ export default function ExploreJharkhand() {
           style={{objectPosition: 'center 56%', objectFit: 'cover'}}
           priority
         />
-        <div className="absolute inset-0 bg-black/0"></div>
+        <div className="absolute inset-0 bg-black/25"></div>
       </div>
       
       {/* Header inside hero section */}

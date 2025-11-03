@@ -103,7 +103,7 @@ export default function ContactUs() {
           style={{objectPosition: 'center 68%', objectFit: 'cover'}}
           priority
         />
-        <div className="absolute inset-0 bg-black/0"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
       {/* Header inside hero section */}
