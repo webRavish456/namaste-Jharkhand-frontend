@@ -39,7 +39,7 @@ export default function Blogs() {
           alt="Deori Temple - Jharkhand"
           fill
           className="object-cover w-full"
-          style={{objectPosition: 'center 54%', objectFit: 'cover'}}
+          style={{objectPosition: 'center 64%', objectFit: 'cover'}}
           priority
         />
         <div className="absolute inset-0 bg-black/10"></div>
@@ -70,7 +70,7 @@ export default function Blogs() {
     </section>
 
       {/* Blog Section */}
-      <section className="pt-2 pb-16 bg-white">
+      <section className="pt-2 p-16 bg-white">
         <div className="max-w-6xl mx-auto px-2 sm:px-2 lg:px-2">
           {loading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -70,9 +70,9 @@ p {
 }
 
 .blogs-hero-image-section{
-  height: 360px;
+  height: 420px;
   @media (max-width: 768px) {
-    height: 300px;
+    height: 340px;
   }
 }
 /* Custom Header Styles */
@@ -301,7 +301,7 @@ font-weight: 600;
   z-index: 1;
   transform: scale(1.2);
   width: 100%;
-  height: 320px;
+  height: 300px;
   bottom: -150px;
 }
 
@@ -516,7 +516,7 @@ font-weight: 600;
   stroke: #FFFFFF;
   color: #FFFFFF4A;
   position: relative;
-  top:-58px;
+  top:-88px;
 }
 
 .explore-header-title {
@@ -538,7 +538,7 @@ font-weight: 600;
 }
 
 .explore-jharkhand {
-  background-image: url('/explore-jharkhand.webp');
+  background-image: url('/explore-jharkhand.jpeg');
   margin:0px 10%;
   border-radius: 12px;
   background-color: #00000070;
@@ -637,7 +637,7 @@ font-weight: 600;
     flex-direction: column;
   }
   .explore-jharkhand {
-    background-image: url('/explore-jharkhand.webp');
+    background-image: url('/explore-jharkhand.jpeg');
     margin:0px;
     background-color: #00000070;
     backdrop-filter: blur(100px);

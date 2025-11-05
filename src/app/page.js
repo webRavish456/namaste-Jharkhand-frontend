@@ -194,9 +194,12 @@ export default function Home() {
               <h3 className="discover-image-title">Patratu Dam</h3>
             </div>
           </div>
+          <Link href="/explore-jharkhand">
           <div className="view-more-button-container">
-          <button className="view-more-button">View More</button>
-          </div>
+           
+              <button className="view-more-button">View More</button>
+            </div>
+          </Link>
         </div>
       </section>
       <div className="border-discover"></div>
@@ -339,9 +342,11 @@ export default function Home() {
                 Then feel free to connect with our team of experts who&apos;re always there to make your journey incredible.
               </p>
               <div className='explore-jharkhand-button-container'>
-              <button className="explore-jharkhand-button">
-                Send Us Query
-              </button>
+              <Link href="/contact-us">
+                <button className="explore-jharkhand-button">
+                  Send Us Query
+                </button>
+              </Link>
               <p className="explore-jharkhand-content" style={{color: '#FFFFFF'}}>
                 OR Call Us at: <span className="text-white">+919102759985</span>
               </p>
@@ -350,7 +355,7 @@ export default function Home() {
             
             <div className="relative z-999 bottom-16 explore-jharkhand-image">
               <Image
-                src="/jharkhand-ihome-mage.webp"
+                src="/jharkhand-home-image.webp"
                 alt="Jharkhand Temple"
                 width={440}
                 height={280}
@@ -363,8 +368,10 @@ export default function Home() {
 
       {/* Incredible Jharkhand Section */}
       <section className="bg-cover">
-        <div className="w-full h-170 incredible-jharkhand-bg" style={{backgroundImage: 'url(/temple.jpg)',backgroundSize: 'cover', backgroundPosition: 'center 60%'}}>
-           <div className="relative max-w-6xl mx-auto px-2  sm:px-4 lg:px-2 incredible-jharkhand-container">
+        <div className="w-full h-170 incredible-jharkhand-bg relative" style={{backgroundImage: 'url(/temple.jpg)',backgroundSize: 'cover', backgroundPosition: 'center 60%'}}>
+          {/* Light overlay to make background lighter */}
+          <div className="absolute inset-0 bg-white/40"></div>
+           <div className="relative max-w-6xl mx-auto px-2  sm:px-4 lg:px-2 incredible-jharkhand-container z-10">
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
             <div className="text-gray-800">

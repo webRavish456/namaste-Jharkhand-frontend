@@ -1,7 +1,40 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Header from "@/component/header";
 import Image from "next/image";
 
 export default function Testimonial() {
+  const [testimonials, setTestimonials] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchTestimonials();
+  }, []);
+
+  const fetchTestimonials = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/testimonials`);
+      if (!response.ok) throw new Error('Failed to fetch testimonials');
+      const data = await response.json();
+      // Filter only active testimonials and reverse the order
+      const activeTestimonials = (data.data || []).filter(t => t.status === 'active');
+      setTestimonials([...activeTestimonials].reverse());
+    } catch (err) {
+      console.error('Error fetching testimonials:', err);
+      setTestimonials([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const formatDate = (dateString) => {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -37,7 +70,7 @@ export default function Testimonial() {
             priority
           />
         </div> 
- 
+
       
       {/* Content */}
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 flex-1 flex items-center justify-center">
@@ -49,111 +82,111 @@ export default function Testimonial() {
       {/* Testimonial Section */}
       <section className="py-20 px-4 testimonial-section-new">
         <div className="max-w-7xl mx-auto">
-          <div className="testimonial-grid-container">
-            
-            {/* Testimonial Card 1 */}
-            <div className="testimonial-card-new testimonial-card-accent">
-              <div className="testimonial-card-header">
-                <div className="testimonial-avatar-wrapper">
-                  <Image
-                    src="/awesome-trip.webp"
-                    alt="Awesome Trip"
-                    width={120}
-                    height={120}
-                    className="testimonial-avatar-image"
-                  />
-                  <div className="testimonial-avatar-ring"></div>
+          {loading ? (
+            <div className="testimonial-grid-container">
+              {/* Skeleton Cards */}
+              {[...Array(3)].map((_, index) => (
+                <div key={index} className="testimonial-card-new testimonial-card-accent">
+                  <div className="testimonial-card-header">
+                    {/* Skeleton Avatar */}
+                    <div className="testimonial-avatar-wrapper">
+                      <div className="w-[120px] h-[120px] bg-gray-200 animate-pulse rounded-full border-4 border-white"></div>
+                      <div className="testimonial-avatar-ring"></div>
+                    </div>
+                    <div className="testimonial-header-content">
+                      {/* Skeleton Title */}
+                      <div className="w-3/4 h-7 bg-gray-200 animate-pulse rounded mb-2"></div>
+                      {/* Skeleton Date */}
+                      <div className="w-1/2 h-5 bg-gray-200 animate-pulse rounded"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="testimonial-card-body">
+                    <div className="testimonial-quote-icon">"</div>
+                    {/* Skeleton Description Lines */}
+                    <div className="space-y-3">
+                      <div className="w-full h-4 bg-gray-200 animate-pulse rounded"></div>
+                      <div className="w-full h-4 bg-gray-200 animate-pulse rounded"></div>
+                      <div className="w-full h-4 bg-gray-200 animate-pulse rounded"></div>
+                      <div className="w-5/6 h-4 bg-gray-200 animate-pulse rounded"></div>
+                      <div className="w-4/6 h-4 bg-gray-200 animate-pulse rounded"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="testimonial-card-footer">
+                    <div className="testimonial-signature-new">
+                      {/* Skeleton Regards */}
+                      <div className="w-32 h-4 bg-gray-200 animate-pulse rounded mb-2"></div>
+                      {/* Skeleton Author */}
+                      <div className="w-40 h-5 bg-gray-200 animate-pulse rounded"></div>
+                    </div>
+                  </div>
                 </div>
-                <div className="testimonial-header-content">
-                  <h3 className="testimonial-card-title">Awesome Trip</h3>
-                  <span className="testimonial-date-new">December 2023</span>
+              ))}
+            </div>
+          ) : testimonials.length === 0 ? (
+            <div className="text-center py-20">
+              <div className="max-w-md mx-auto">
+                <div className="mb-4">
+                  <svg 
+                    className="w-24 h-24 mx-auto text-gray-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={1.5} 
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+                    />
+                  </svg>
                 </div>
-              </div>
-              
-              <div className="testimonial-card-body">
-                <div className="testimonial-quote-icon">"</div>
-                <p className="testimonial-text-new">
-                  We truly had an amazing experience during the entire tour. Everything from hotels, visiting attractions to flight departure. We also met our team of experts who gave interesting insights about various monuments. Round-the clock assistance. We are highly impressed with all the services offered and would love to travel India with you again in future.
-                </p>
-              </div>
-              
-              <div className="testimonial-card-footer">
-                <div className="testimonial-signature-new">
-                  <span className="testimonial-regards">With Best Regards</span>
-                  <span className="testimonial-author">Ms Margot Scholz</span>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-700 mb-2">No Records Found</h3>
+                <p className="text-gray-500">There are no testimonials available at the moment.</p>
               </div>
             </div>
-
-            {/* Testimonial Card 2 */}
-            <div className="testimonial-card-new testimonial-card-accent">
-              <div className="testimonial-card-header">
-                <div className="testimonial-avatar-wrapper">
-                  <Image
-                    src="/great-trip.webp"
-                    alt="Great Trip"
-                    width={120}
-                    height={120}
-                    className="testimonial-avatar-image"
-                  />
-                  <div className="testimonial-avatar-ring"></div>
+          ) : (
+            <div className="testimonial-grid-container">
+              {testimonials.map((testimonial, index) => (
+                <div key={testimonial._id || index} className="testimonial-card-new testimonial-card-accent">
+                  <div className="testimonial-card-header">
+                    <div className="testimonial-avatar-wrapper">
+                      <Image
+                        src={testimonial.image || '/placeholder-image.webp'}
+                        alt={testimonial.title || 'Testimonial'}
+                        width={120}
+                        height={120}
+                        className="testimonial-avatar-image"
+                        onError={(e) => {
+                          e.target.src = '/placeholder-image.webp';
+                        }}
+                      />
+                      <div className="testimonial-avatar-ring"></div>
+                    </div>
+                    <div className="testimonial-header-content">
+                      <h3 className="testimonial-card-title">{testimonial.title || 'Testimonial'}</h3>
+                      <span className="testimonial-date-new">{formatDate(testimonial.date)}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="testimonial-card-body">
+                    <div className="testimonial-quote-icon">"</div>
+                    <p className="testimonial-text-new">
+                      {testimonial.description || 'No description available.'}
+                    </p>
+                  </div>
+                  
+                  <div className="testimonial-card-footer">
+                    <div className="testimonial-signature-new">
+                      <span className="testimonial-regards">With Best Regards</span>
+                      <span className="testimonial-author">{testimonial.authorName || 'Anonymous'}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="testimonial-header-content">
-                  <h3 className="testimonial-card-title">Great Trip</h3>
-                  <span className="testimonial-date-new">June 2024</span>
-                </div>
-              </div>
-              
-              <div className="testimonial-card-body">
-                <div className="testimonial-quote-icon">"</div>
-                <p className="testimonial-text-new">
-                  We are greatly satisfied and enjoyed very much. Guide was very much professional, he spoke such English, so even those who spoke English poorly understood him almost 90%. And the country was amazing. So we liked everything. Thank you very much for your assistance.
-                </p>
-              </div>
-              
-              <div className="testimonial-card-footer">
-                <div className="testimonial-signature-new">
-                  <span className="testimonial-regards">Warm Regards</span>
-                  <span className="testimonial-author">Mrs Elena Zhukova & Group</span>
-                </div>
-              </div>
+              ))}
             </div>
-
-            {/* Testimonial Card 3 */}
-            <div className="testimonial-card-new testimonial-card-accent">
-              <div className="testimonial-card-header">
-                <div className="testimonial-avatar-wrapper">
-                  <Image
-                    src="/amazing-trip.webp"
-                    alt="Amazing Trip"
-                    width={120}
-                    height={120}
-                    className="testimonial-avatar-image"
-                  />
-                  <div className="testimonial-avatar-ring"></div>
-                </div>
-                <div className="testimonial-header-content">
-                  <h3 className="testimonial-card-title">Amazing Trip</h3>
-                  <span className="testimonial-date-new">January 2024</span>
-                </div>
-              </div>
-              
-              <div className="testimonial-card-body">
-                <div className="testimonial-quote-icon">"</div>
-                <p className="testimonial-text-new">
-                  Our Journey was absolutely amazing. We extend our heartfelt thanks to EaseMyTrip, which made our vacations memorable. Everything was planned perfectly, and we had a great time with our friends and family. Truly, it was the most beautiful experience we had during our vacation to Chandil.
-                </p>
-              </div>
-              
-              <div className="testimonial-card-footer">
-                <div className="testimonial-signature-new">
-                  <span className="testimonial-regards">Warm Regards</span>
-                  <span className="testimonial-author">Mr Christian Zimmermann with Family</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
+          )}
         </div>
       </section>
     </div>

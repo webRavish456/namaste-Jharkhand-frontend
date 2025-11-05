@@ -104,7 +104,7 @@ export default function ExploreJharkhand() {
           style={{objectPosition: 'center 56%', objectFit: 'cover'}}
           priority
         />
-        <div className="absolute inset-0 bg-black/25"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
       
       {/* Header inside hero section */}
