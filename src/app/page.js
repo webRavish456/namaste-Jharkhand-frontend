@@ -368,9 +368,9 @@ export default function Home() {
 
       {/* Incredible Jharkhand Section */}
       <section className="bg-cover">
-        <div className="w-full h-170 incredible-jharkhand-bg relative" style={{backgroundImage: 'url(/temple.jpg)',backgroundSize: 'cover', backgroundPosition: 'center 60%'}}>
+        <div className="w-full h-170 incredible-jharkhand-bg relative" style={{backgroundImage: 'url(/temple.jpg)',backgroundSize: 'cover', backgroundPosition: 'center 60%', filter: 'brightness(1.2) contrast(1.1)'}}>
           {/* Light overlay to make background lighter */}
-          <div className="absolute inset-0 bg-white/40"></div>
+          <div className="absolute inset-0 bg-white/0"></div>
            <div className="relative max-w-6xl mx-auto px-2  sm:px-4 lg:px-2 incredible-jharkhand-container z-10">
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
