@@ -56,7 +56,7 @@ p {
 
 
 .explore-details-hero-image-section{
-  height: 320px;
+  height: 360px;
   @media (max-width: 768px) {
     height: 280px;
   }
@@ -283,8 +283,8 @@ font-weight: 600;
   z-index: 1;
   transform: scale(1.2);
   width: 100%;
-  height: 300px;
-  bottom: -190px;
+  height: 320px;
+  bottom: -150px;
 }
 
 .testimonial-smoke-effect-bottom{
@@ -470,7 +470,7 @@ font-weight: 600;
   stroke-width: 1px;
   -webkit-text-stroke-color: #FFFFFF;
   stroke: #FFFFFF;
-  color: #FFFFFF4A;
+  color: #FFFFFF9A;
   position: relative;
   top:-76px;
 }
@@ -484,9 +484,10 @@ font-weight: 600;
   stroke-width: 1px;
   -webkit-text-stroke-color: #FFFFFF;
   stroke: #FFFFFF;
-  color: #FFFFFF4A;
+  color: #FFFFFF9A;
   position: relative;
    top: -50px;
+
 }
 
 .explore-journey-title {
@@ -499,7 +500,7 @@ font-weight: 600;
   stroke-width: 1px;
   -webkit-text-stroke-color: #FFFFFF;
   stroke: #FFFFFF;
-  color: #FFFFFF4A;
+  color: #FFFFFF9a;
   position: relative;
   top:-40px;
 
@@ -514,7 +515,7 @@ font-weight: 600;
   stroke-width: 1px;
   -webkit-text-stroke-color: #FFFFFF;
   stroke: #FFFFFF;
-  color: #FFFFFF4A;
+  color: #FFFFFF9A;
   position: relative;
   top:-88px;
 }
@@ -526,7 +527,7 @@ font-weight: 600;
   letter-spacing: 1.7px;
   color: #FFFFFF;
   position: relative;
-  top:-40px;
+  top:-60px;
 }
 
 .explore-heritage-section {
@@ -675,7 +676,7 @@ font-weight: 600;
     stroke-width: 1px;
     -webkit-text-stroke-color: #FFFFFF;
     stroke: #FFFFFF;
-    color: #FFFFFF4A;
+    color: #FFFFFF9A;
     position: relative;
     top:0px;
   }
@@ -691,7 +692,7 @@ font-weight: 600;
     stroke-width: 1px;
     -webkit-text-stroke-color: #FFFFFF;
     stroke: #FFFFFF;
-    color: #FFFFFF4A;
+    color: #FFFFFF9A;
     position: relative;
     top:0px;
   
@@ -1336,7 +1337,7 @@ font-weight: 600;
   stroke-width: 2px;
   -webkit-text-stroke-color: #FFFFFF;
   stroke: #FFFFFF;
-  color: #FFFFFF4A;
+  color: #FFFFFF9A;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   animation: fadeInUp 0.8s ease-out;
 }
@@ -1361,7 +1362,7 @@ font-weight: 600;
 .testimonial-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 20px;
+  gap: 30px;
   padding: 60px 10px 40px;
 }
 
@@ -1374,6 +1375,9 @@ font-weight: 600;
   border: 1px solid rgba(255, 227, 146, 0.3);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 
@@ -1388,7 +1392,7 @@ font-weight: 600;
 }
 
 .testimonial-card-accent {
-  background: linear-gradient(135deg, #FFF9E6 0%, #e6d8ae 100%);
+  background: linear-gradient(135deg, #d8be7b 0%, #f4efe4 50%, #d8be7b 100%);
   border: 2px solid rgba(255, 227, 146, 0.5);
 }
 
@@ -1448,7 +1452,7 @@ font-weight: 600;
 
 .testimonial-card-title {
   font-family: "Aclonica", Sans-serif;
-  font-size: 26px;
+  font-size: 25px;
   font-weight: 600;
   color: #682900;
   margin: 0;
@@ -1458,7 +1462,6 @@ font-weight: 600;
 .testimonial-date-new {
   font-family: "Poppins", Sans-serif;
   font-size: 16px;
-  font-weight: 550;
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -1467,7 +1470,10 @@ font-weight: 600;
 .testimonial-card-body {
   position: relative;
   margin-bottom: 24px;
+  flex: 1;
   min-height: 180px;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-quote-icon {
@@ -1484,13 +1490,17 @@ font-weight: 600;
 .testimonial-text-new {
   text-align: left;
   font-family: "Shantell Sans", Sans-serif;
-  font-weight: 200;
-  color: #000000;
+  font-weight: 400;
+  color: #4a4a4a;
+  flex: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .testimonial-card-footer {
   padding-top: 20px;
   border-top: 1px solid rgba(104, 41, 0, 0.1);
+  margin-top: auto;
 }
 
 .testimonial-signature-new {
@@ -1564,7 +1574,7 @@ font-weight: 600;
   }
 
   .testimonial-card-body {
-    min-height: auto;
+    min-height: 150px;
   }
 }
 
@@ -1606,7 +1616,7 @@ font-weight: 600;
   stroke-width: 1px;
   -webkit-text-stroke-color: #FFFFFF;
   stroke: #FFFFFF;
-  color: #FFFFFF4A;
+  color: #FFFFFF9A;
 }
 
 /* Blog Card Styling */

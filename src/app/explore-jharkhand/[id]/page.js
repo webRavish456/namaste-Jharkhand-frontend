@@ -115,7 +115,7 @@ export default function ExploreJharkhandDetail() {
             className="object-cover w-full"
             priority
           />
-        <div className="absolute inset-0 bg-black/0"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
       
       {/* Header inside hero section */}
@@ -135,7 +135,7 @@ export default function ExploreJharkhandDetail() {
         </div> 
       
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 flex-1 flex items-center justify-center bottom-4">
+      <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 flex-1 flex items-center justify-center">
         <h1 className='explore-header-title'>{detailData[0].exploreJharkhandId.title || 'Destination'}</h1>
       </div>
    
