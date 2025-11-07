@@ -112,87 +112,99 @@ export default function Home() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-2 sm:px-3 lg:px-4 discover-image-container">
           
-            <div className="text-center ">
-              <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
-                <Image
-                  src="/dalma-wildlife.webp"
-                  alt="Dalma Wildlife Sanctuary"
-                  width={300}
-                  height={225}
-                  className="w-full h-full object-fill"
-                />
+            <Link href="/explore-jharkhand/68f782281c0fe6f1e54ab9ab">
+              <div className="text-center cursor-pointer">
+                <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
+                  <Image
+                    src="/dalma-wildlife.webp"
+                    alt="Dalma Wildlife Sanctuary"
+                    width={300}
+                    height={225}
+                    className="w-full h-full object-fill"
+                  />
+                </div>
+                <h3 className="discover-image-title">Dalma Wildlife</h3>
               </div>
-              <h3 className="discover-image-title">Dalma Wildlife</h3>
-            </div>
+            </Link>
 
         
-            <div className="text-center ">
-              <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
-                <Image
-                  src="/badrinath.webp"
-                  alt="Baidyanath Dham"
-                  width={300}
-                  height={225}
-                  className="w-full h-full"
-                />
+            <Link href="/explore-jharkhand/68f780831c0fe6f1e54ab989">
+              <div className="text-center cursor-pointer">
+                <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
+                  <Image
+                    src="/badrinath.webp"
+                    alt="Baidyanath Dham"
+                    width={300}
+                    height={225}
+                    className="w-full h-full"
+                  />
+                </div>
+                <h3 className="discover-image-title">Baidyanath Dham</h3>
               </div>
-              <h3 className="discover-image-title">Baidyanath Dham</h3>
-            </div>
+            </Link>
 
 
-            <div className="text-center ">
-              <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
-                <Image
-                  src="/Jubilee-Park-picture.webp"
-                  alt="Jubilee Park"
-                  width={300}
-                  height={225}
-                  className="w-full h-full object-cover"
-                />
+            <Link href="/explore-jharkhand/68f783ef1c0fe6f1e54ab9b9">
+              <div className="text-center cursor-pointer">
+                <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
+                  <Image
+                    src="/Jubilee-Park-picture.webp"
+                    alt="Jubilee Park"
+                    width={300}
+                    height={225}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="discover-image-title">Jubilee Park</h3>
               </div>
-              <h3 className="discover-image-title">Jubilee Park</h3>
-            </div>
+            </Link>
 
-            <div className="text-center ">
-              <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
-                <Image
-                  src="/sun-temple.webp"
-                  alt="Sun Temple"
-                  width={300}
-                  height={225}
-                  className="w-full h-full object-cover"
-                />
+            <Link href="/explore-jharkhand/68ff1c2955944a7ea945128f">
+              <div className="text-center cursor-pointer">
+                <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
+                  <Image
+                    src="/sun-temple.webp"
+                    alt="Sun Temple"
+                    width={300}
+                    height={225}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="discover-image-title">Sun Temple</h3>
               </div>
-              <h3 className="discover-image-title">Sun Temple</h3>
-            </div>
+            </Link>
 
       
-            <div className="text-center ">
-              <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
-                <Image
-                  src="/parasnath.webp"
-                  alt="Parasnath Peak"
-                  width={300}
-                  height={225}
-                  className="w-full h-full object-cover"
-                />
+            <Link href="/explore-jharkhand/68ff1e3c55944a7ea94512a3">
+              <div className="text-center cursor-pointer">
+                <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
+                  <Image
+                    src="/parasnath.webp"
+                    alt="Parasnath Peak"
+                    width={300}
+                    height={225}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="discover-image-title">Parasnath Peak</h3>
               </div>
-              <h3 className="discover-image-title">Parasnath Peak</h3>
-            </div>
+            </Link>
 
   
-              <div className="text-center ">
-                <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
-                <Image
-                  src="/patratu-dam.webp"
-                  alt="Patratu Dam"
-                  width={300}
-                  height={225}
-                  className="w-full h-full object-cover"
-                />
+              <Link href="/explore-jharkhand/68f787641c0fe6f1e54ab9d5">
+                <div className="text-center cursor-pointer">
+                  <div className="w-68 h-68 mx-auto mb-4 rounded-full overflow-hidden discover-image-card">
+                  <Image
+                    src="/patratu-dam.webp"
+                    alt="Patratu Dam"
+                    width={300}
+                    height={225}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="discover-image-title">Patratu Dam</h3>
               </div>
-              <h3 className="discover-image-title">Patratu Dam</h3>
-            </div>
+              </Link>
           </div>
           <Link href="/explore-jharkhand">
           <div className="view-more-button-container">
@@ -368,7 +380,7 @@ export default function Home() {
 
       {/* Incredible Jharkhand Section */}
       <section className="bg-cover">
-        <div className="w-full h-170 incredible-jharkhand-bg relative" style={{backgroundImage: 'url(/temple.jpg)',backgroundSize: 'cover', backgroundPosition: 'center 60%', filter: 'brightness(1.2) contrast(1.1)'}}>
+        <div className="w-full h-162 incredible-jharkhand-bg relative" style={{backgroundImage: 'url(/temple.jpg)',backgroundSize: 'cover', backgroundPosition: 'center 60%', filter: 'brightness(1.2) contrast(1.1)'}}>
           {/* Light overlay to make background lighter */}
           <div className="absolute inset-0 bg-white/0"></div>
            <div className="relative max-w-6xl mx-auto px-2  sm:px-4 lg:px-2 incredible-jharkhand-container z-10">

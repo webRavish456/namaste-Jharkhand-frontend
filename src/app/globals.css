@@ -1184,7 +1184,8 @@ font-weight: 600;
 }
 
 .incredible-jharkhand-container {
-  padding-top: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   width: 100%;
 }
 
@@ -1208,8 +1209,8 @@ font-weight: 600;
 /* Incredible Jharkhand Section Responsive Styles for Mobile (0-768px) */
 @media (max-width: 768px) {
   .incredible-jharkhand-container {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   
   .incredible-jharkhand-title {
@@ -1227,7 +1228,7 @@ font-weight: 600;
   
   /* Background image responsive */
   .incredible-jharkhand-bg {
-    height: 120vh;
+    height: 90vh;
     background-size: cover !important;
     background-position:left !important;
   }
@@ -1392,7 +1393,7 @@ font-weight: 600;
 }
 
 .testimonial-card-accent {
-  background: linear-gradient(135deg, #d8be7b 0%, #f4efe4 50%, #d8be7b 100%);
+  background: linear-gradient(135deg, #d0b56d 0%, #f0ead8 50%, #d0b56d 100%);
   border: 2px solid rgba(255, 227, 146, 0.5);
 }
 
@@ -2647,5 +2648,20 @@ letter-spacing: 0.5px;
 }
 }
 
+/* Mobile Menu Slide Down Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
 
 

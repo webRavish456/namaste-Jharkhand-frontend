@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState('explore-jharkhand');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +17,10 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <header className="relative top-0 left-0 right-0 z-50 bg-transparent">
@@ -76,7 +82,8 @@ export default function Header() {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-white  focus:outline-none focus:font-bold transition-all duration-300"
+              onClick={toggleMobileMenu}
+              className="text-white focus:outline-none transition-all duration-300 cursor-pointer"
               aria-label="Toggle menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -85,6 +92,94 @@ export default function Header() {
             </button>
           </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 z-50 md:hidden">
+            {/* Backdrop */}
+            <div 
+              className="absolute inset-0 bg-black/20"
+              onClick={toggleMobileMenu}
+            ></div>
+            
+            {/* Menu Panel - Top Drawer */}
+            <div className="absolute top-0 left-0 right-0 bg-white shadow-2xl animate-slide-down">
+              {/* Close Button */}
+              <div className="flex justify-end p-2">
+                <button
+                  onClick={toggleMobileMenu}
+                  className="p-1 border-2 border-dashed border-blue-400 rounded-md focus:outline-none cursor-pointer"
+                  aria-label="Close menu"
+                >
+                  <svg className="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Menu Items */}
+              <nav className="pb-3">
+                <ul className="space-y-0">
+                  <li 
+                    className="border-t border-b border-gray-200"
+                    onMouseEnter={() => setHoveredItem('explore-jharkhand')}
+                  >
+                    <Link 
+                      href="/explore-jharkhand" 
+                      className={`block font-normal  px-4 py-3 transition-colors duration-200 ${
+                        hoveredItem === 'explore-jharkhand' ? 'text-green-600' : 'text-black'
+                      }`}
+                      onClick={toggleMobileMenu}
+                    >
+                      Explore Jharkhand
+                    </Link>
+                  </li>
+                  <li 
+                    className="border-b border-gray-200"
+                    onMouseEnter={() => setHoveredItem('testimonial')}
+                  >
+                    <Link 
+                      href="/testimonial" 
+                      className={`block font-normal px-4 py-3 transition-colors duration-200 ${
+                        hoveredItem === 'testimonial' ? 'text-green-600' : 'text-black'
+                      }`}
+                      onClick={toggleMobileMenu}
+                    >
+                      Testimonial
+                    </Link>
+                  </li>
+                  <li 
+                    className="border-b border-gray-200"
+                    onMouseEnter={() => setHoveredItem('blogs')}
+                  >
+                    <Link 
+                      href="/blogs" 
+                      className={`block font-normal px-4 py-3 transition-colors duration-200 ${
+                        hoveredItem === 'blogs' ? 'text-green-600' : 'text-black'
+                      }`}
+                      onClick={toggleMobileMenu}
+                    >
+                      Blogs
+                    </Link>
+                  </li>
+                  <li
+                    onMouseEnter={() => setHoveredItem('contact-us')}
+                  >
+                    <Link 
+                      href="/contact-us" 
+                      className={`block font-normal px-4 py-3 transition-colors duration-200 ${
+                        hoveredItem === 'contact-us' ? 'text-green-600' : 'text-black'
+                      }`}
+                      onClick={toggleMobileMenu}
+                    >
+                      Contact Us
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
