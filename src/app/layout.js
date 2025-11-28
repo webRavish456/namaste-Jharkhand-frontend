@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable}`}
-        style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}
+        style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale'}}
         suppressHydrationWarning
       >
         <main>{children}</main>

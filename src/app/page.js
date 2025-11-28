@@ -15,13 +15,13 @@ export default function Home() {
       <section className="relative h-[540px] flex flex-col overflow-hidden hero-image-section">
       
         {/* Background Image - Parasnath Temple */}
-        <div className="absolute inset-0 w-full h-[100%]">
+        <div className="absolute inset-0 w-100% h-[100%]">
           <Image
             src="/parasnath-mandir.webp"
             alt="Parasnath Temple - Jharkhand"
             fill
-            className="object-cover w-full"
-            style={{objectPosition: 'center 68%', objectFit: 'cover'}}
+            className="object-cover w-full hero-bg-image"
+            style={{objectFit: 'cover'}}
             priority
           />
           <div className="absolute inset-0 bg-black/40"></div>
@@ -346,6 +346,7 @@ export default function Home() {
         <div className="absolute inset-0 h-75 bg-cover bg-center bg-no-repeat explore-jharkhand"></div>
         <div className="explore-jharkhand-container">
           <div className="z-999 explore-jharkhand-content-container">
+            
             <div className="rounded-3xl p-10 text-white max-w-2xl explore-jharkhand-card flex flex-col gap-4">
               <h2 className="explore-jharkhand-title">
                 Want to Explore Jharkhand?
@@ -374,13 +375,15 @@ export default function Home() {
                 className='custom-image rounded-lg'
               />
             </div>
+
+
           </div>
         </div>
       </section>
 
       {/* Incredible Jharkhand Section */}
       <section className="bg-cover">
-        <div className="w-full h-162 incredible-jharkhand-bg relative" style={{backgroundImage: 'url(/temple.jpg)',backgroundSize: 'cover', backgroundPosition: 'center 60%', filter: 'brightness(1.2) contrast(1.1)'}}>
+        <div className="w-full incredible-jharkhand-bg relative" style={{backgroundImage: 'url(/temple.jpg)',backgroundSize: 'cover', filter: 'brightness(1.2) contrast(1.1)'}}>
           {/* Light overlay to make background lighter */}
           <div className="absolute inset-0 bg-white/0"></div>
            <div className="relative max-w-6xl mx-auto px-2  sm:px-4 lg:px-2 incredible-jharkhand-container z-10">
