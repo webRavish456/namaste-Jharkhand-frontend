@@ -22,6 +22,39 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
+
+export const metadata = {
+  title: "Namaste Jharkhand – Explore the Soul of Jharkhand",
+  description:
+    "Explore the untamed beauty of Jharkhand – waterfalls, forests, temples, tribal culture, heritage, and top tourist destinations. Plan your Jharkhand journey with Namaste Jharkhand.",
+  keywords: [
+    "Jharkhand tourism",
+    "Visit Jharkhand",
+    "Jharkhand temples",
+    "Jharkhand waterfalls",
+    "Jharkhand culture",
+    "Jharkhand travel guide",
+  ],
+  openGraph: {
+    title: "Namaste Jharkhand – Explore the Soul of Jharkhand",
+    description:
+      "Discover Jharkhand’s waterfalls, forests, temples, tribal culture, and heritage. Your complete guide to Jharkhand tourism.",
+    url: "https://namastejharkhand.in",
+    siteName: "Namaste Jharkhand",
+    images: [
+      {
+        url: "/parasnath-mandir.webp",
+        width: 1200,
+        height: 630,
+        alt: "Parasnath Temple Jharkhand",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+};
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

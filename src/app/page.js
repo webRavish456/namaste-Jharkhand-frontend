@@ -8,6 +8,7 @@ export default function Home() {
 
   const isSmscreen = useMediaQuery("(max-width:768px)");
 
+
   return (
     <div>
 
