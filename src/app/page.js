@@ -20,6 +20,7 @@ export default function Home() {
             src="/parasnath-mandir.webp"
             alt="Parasnath Temple - Jharkhand"
             fill
+            quality={60}
             sizes="100vw"
             className="object-cover w-full hero-bg-image"
             style={{objectFit: 'cover'}}
